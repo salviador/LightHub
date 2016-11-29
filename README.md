@@ -6,7 +6,7 @@ pyton tornado, mysql.
 
 ### Settaggi
 
- * /home/app/RF24module.py   | add_cordinatore
+* /home/app/RF24module.py   | Cambiare indirizzo cordinatore: *"add_cordinatore"*
 * /home/app/database.py     | se prima volta in esecuzione togliere il commento a  sql = "CREATE DATABASE IF NOT EXISTS NODI"
 
 
