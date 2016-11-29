@@ -47,6 +47,7 @@ Arduino  |   nrf24l01+
 
 
 La programmazione avviene in automatico, svolgere i seguenti passi:
+
 1. Premere il puslante del nodo
 2. Nella web-app sezione "Nodi" , clicca "Aggiungi Nodo"
 
