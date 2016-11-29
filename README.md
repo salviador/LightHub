@@ -1,6 +1,6 @@
 # LightHub
 
---------Raspberry:---------
+## --------Raspberry:---------
 Raspberry è il cordinatore e webserver, il webserver è installato in "/home/app", installate librerie "RF24" per nrf24l01+ , 
 pyton tornado, mysql.
 
@@ -14,7 +14,7 @@ Raspberry      nrf24l01+
   ---            IRQ
  
 
---------Arduino UNO:----------
+## --------Arduino UNO:----------
 Arduino Uno usati come nodi
 Per ogni nodo cambiare "const uint64_t ADD_NODO = 0x0000000023LL;" DEVE ESSERE UNIVOCO !
 
