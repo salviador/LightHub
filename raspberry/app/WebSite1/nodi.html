@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Light Hub</title>
+	<meta charset="utf-8" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+    <style>
+        td
+        {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" >Light Hub</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/main.html">Home <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Nodi</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Lista Nodi: 
+            <div class="btn-group pull-right">
+                <a href="#" class="btn btn-success btn-sm btnAggiungi">Aggiungi Nodo</a>
+            </div>
+        </div>
+        <div class="panel-body">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+       
+                    
+                        <table class="table" id="NodiTable" border="0" cellspacing="5" cellpadding="5" align="center" width="100%">
+                            <thead style="background-color:gainsboro">
+                                <tr style="border-bottom:1pt solid black;">
+                                    <th width="20%">Nome</th>
+                                    <th width="10%">Tipo</th>
+                                    <th width="10%">Stato</th>
+                                    <th width="45%">Funzionamento</th>
+                                    <th width="5%">Up</th>
+                                    <th width="5%">Down</th>
+                                    <th width="5%">Elimina</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="NodiSetting">
+
+                                <!-- Nodo -->
+                                <tr id="Nodo_A">
+
+                                    <td>A</td>
+                                    <td>Dimmer</td>
+                                    <td>online</td>
+                                    <td>
+
+                                            <table border="0" cellspacing="5" cellpadding="5" align="center" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="25%"> <p>CH1</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                        <th width="25%"> <p>CH2</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                        <th width="25%"> <p>CH3</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                        <th width="25%"> <p>CH4</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input class="dimmerCheckbox" id="Checkbox1" type="checkbox" /></td>
+                                                        <td><input class="dimmerCheckbox" id="Checkbox2" type="checkbox" /></td>
+                                                        <td><input class="dimmerCheckbox" id="Checkbox3" type="checkbox" /></td>
+                                                        <td><input class="dimmerCheckbox" id="Checkbox4" type="checkbox" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                    </td>
+                                    <td><button type="button" class="btn btn-secondary btn-primary rowUp">Up</button></td>
+                                    <td><button type="button" class="btn btn-secondary btn-primary rowDown">Down</button></td>
+                                    <td><button type="button" id="nodi_remove_A" class="btn btn-secondary btn-danger rowRemove">Elimina</button></td>
+                                </tr>
+
+
+                                <!-- Nodo -->
+                                <tr id="Nodo_B">
+
+                                    <td>B</td>
+                                    <td>Dimmer</td>
+                                    <td>online</td>
+                                    <td>
+
+                                        <table border="0" cellspacing="5" cellpadding="5" align="center" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th width="25%"> <p>CH1</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                    <th width="25%"> <p>CH2</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                    <th width="25%"> <p>CH3</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                    <th width="25%"> <p>CH4</p><span style="font-size:0.8em"> [x]Enable dimmer</span><br /> <span style="font-size:0.8em"> [ ]Only switch</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input class="dimmerCheckbox" id="Checkbox1" type="checkbox" /></td>
+                                                    <td><input class="dimmerCheckbox" id="Checkbox2" type="checkbox" /></td>
+                                                    <td><input class="dimmerCheckbox" id="Checkbox3" type="checkbox" /></td>
+                                                    <td><input class="dimmerCheckbox" id="Checkbox4" type="checkbox" /></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                    </td>
+                                    <td><button type="button" class="btn btn-secondary btn-primary rowUp">Up</button></td>
+                                    <td><button type="button" class="btn btn-secondary btn-primary rowDown">Down</button></td>
+                                    <td><button type="button" id="nodi_remove_B" class="btn btn-secondary btn-danger rowRemove">Elimina</button></td>
+                                </tr>
+
+
+
+
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+
+               
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="panel-footer"></div>
+    </div>
+
+
+    <script src="/WebSite1/js/nodi.js"></script>
+
+    <script>
+
+        //Recupera Lista Nodi dal server
+        $(document).ready(function () {
+            var jqxhr = $.getJSON("GetListaNodiSetting.json", function (data) {
+                //console.log("success");
+                console.log(data);
+                var count = Object.keys(data).length;
+                //console.log(count);
+
+                $('#NodiSetting').empty();
+                
+                $.each(data.OrdineNodi, function (key, val) {
+                    //console.log(key);
+                    //console.log(val);
+                    //console.log(val.Descrizione);
+                    //console.log(val.Tipo);
+                    //console.log(data[val].Tipo);
+
+                    if (data[val].Tipo == 5) {
+                         popola_nodi_setting_dimmer(val, data[val]);
+                    }
+
+                });
+
+                /*
+                $.each(data, function (key, val) {
+                    //console.log(key);
+                    //console.log(val);
+                    //console.log(val.Descrizione);
+                    //console.log(val.Tipo);
+                    if (val.Tipo == 5) {
+                        popola_nodi_setting_dimmer(key, val);
+                    }
+                });
+                */
+
+
+            })
+         .fail(function () {
+             console.log("error");
+         });
+        });
+
+
+
+
+
+        $(document).on("click", ".btnAggiungi", function (e) {
+            var dialog = bootbox.confirm({
+               title: 'Aggiungi Nodo',
+               message: '<p><i class="fa fa-spin fa-spinner"></i> Search...</p>',
+               buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> Cancel'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> Aggiungi'
+                    }
+                },
+                callback: function (result) {
+                    console.log('This was logged in the callback: ' + result);
+                }
+            });
+            dialog.init(function () {
+
+                var jqxhr = $.getJSON("AggiungiNodi.json", function (data) {
+                    //console.log("success");
+                    //console.log(data);
+                    var count = Object.keys(data).length;
+                    //console.log(count);
+                    /*
+                    $.each(data, function (key, val) {
+                        console.log(key);
+                        //console.log(val);
+                        console.log(val.Descrizione);
+                        console.log(val.Tipo);
+                    });
+                    */
+
+                    if (count == 1) {
+                        
+                        if (Object.keys(data)[0] === "Errore") {
+                            dialog.find('.bootbox-body').html('Nodo: ' + data[Object.keys(data)[0]]);
+                        }else{
+                            //console.log(Object.keys(data)[0]);
+                            //console.log(data[Object.keys(data)[0]].Descrizione);
+                            //console.log(data[Object.keys(data)[0]].Tipo);
+                            dialog.find('.bootbox-body').html('Nodo: ' + Object.keys(data)[0] + '<br>' + 'Tipo:' + data[Object.keys(data)[0]].Descrizione);
+                            popola_nodi(data);
+                            //Popula
+                        }
+
+                    } else {
+                        dialog.find('.bootbox-body').html('ERRORE!');
+                    }
+    
+
+                })
+                  .fail(function () {
+                      console.log("error");
+                      dialog.find('.bootbox-body').html('Error');
+                  });
+
+
+                //setTimeout(function () {
+                //    dialog.find('.bootbox-body').html('I was loaded after the dialog was shown!');
+                //}, 3000);
+            });
+        });
+
+
+        $(document).on("click", ".rowRemove", function () {
+            var nodoname = (this.id).toString();
+            console.log("Rimuovi");
+            console.log(nodoname.substring(12, nodoname.length));
+            var datas = { Nodo: nodoname.substring(12, nodoname.length) }; //, Age: 25 };
+            var data = JSON.stringify(datas);
+            $.post('RimuoviNodo.json', data, function (response) {
+                // Do something with the request
+            }, 'json');
+
+            $(this).closest('tr').remove();
+        });
+
+
+        $(document).on("click", ".rowUp,.rowDown", function () {
+        //$(".rowUp,.rowDown").click(function () {
+            console.log("Up/Down Clicket");
+            var row = $(this).parents("tr:first");
+            if ($(this).is(".rowUp")) {
+                row.insertBefore(row.prev());
+            } else if ($(this).is(".rowDown")) {
+                row.insertAfter(row.next());
+            }
+            //update order al server
+            /*
+            var nodo = $(this).closest("tr")[0].id;
+            var nodoname = nodo.toString();
+            console.log(nodoname.substring(5, nodoname.length));
+            */
+
+            //Lista nodi in the table
+            //var datas = '{ Nodi : [';
+            //var datas = {};
+            var datalist = [];
+            var icount = 0;
+            var start1 = true;
+            $('#NodiTable > tbody  > tr').each(function () {
+                var nodoname = (this.id).toString();
+                console.log(nodoname.substring(5, nodoname.length));
+                if (!start1) {
+                    //datas = datas + ' , ';
+                } 
+                //datas = datas + (nodoname.substring(5, nodoname.length)) ;
+                datalist[icount] = nodoname.substring(5, nodoname.length);
+                start1 = false;
+                icount = icount + 1;
+            });
+            
+            //datas = datas + '] }';
+            var datas = { "Nodi": datalist };
+            console.log(datas);
+            
+            var data = JSON.stringify(datas);
+            $.post('OrdineNodi.json', data, function (response) {
+                // Do something with the request
+            }, 'json');
+            
+
+        });
+        
+        $(document).on("click", ".dimmerCheckbox", function () {
+            //(this.checked);
+
+            var nodo = $(this).parent().closest("table").closest("tr")[0];
+            var nodoname = (nodo.id).toString();
+            console.log(nodoname.substring(5, nodoname.length));
+            //console.log(nodo.id);
+
+            var ch = $(this, "input")[0];
+            console.log(ch.id);
+
+            console.log(this.checked);
+
+            // { "firstName": "John", "lastName": "Doe" }; 
+            var datas = { "Nodo": nodoname.substring(5, nodoname.length) , "checkbox":  ch.id , "value": this.checked  };
+            var data = JSON.stringify(datas);
+            $.post('FunzionamentoNodo.json', data, function (response) {
+                // Do something with the request
+            }, 'json');
+            
+
+        });
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

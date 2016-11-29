@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Light Hub</title>
+	<meta charset="utf-8" />   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+
+
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="/WebSite1/css/bootstrap-slider.min.css">
+    <script src="/WebSite1/js/bootstrap-slider.min.js"></script>
+
+    <style>
+        .mdl-form__icon {
+            flex-shrink: 0;
+            padding-left: 16px;
+            width: 32px;
+        }
+        .mdl-form__label {
+            flex: 2 2 auto;
+            overflow: hidden;
+            padding-left: 16px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .mdl-form__row {
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            box-sizing: content-box;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 48px;
+            margin: 0 8px;
+            padding: 4px 0;
+            white-space: nowrap;
+        }
+
+        #ex1Slider .slider-selection {
+	        background: #BABABA;
+        }
+
+        .central_panel_nodo_enable {
+            background-color: #fff !important;      
+        }
+
+        .central_panel_nodo_disable {
+            background-color: rgba(0, 0, 0, 0.05) !important;      
+        }
+
+        .heading_panel_nodo_disable {
+            background-color: rgba(0, 0, 0, 0.05) !important;      
+        }
+
+    </style>
+
+</head>
+<body style="background-color: #f5f5f5 !important;">
+
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" >Light Hub</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/nodi.html">Nodi</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div class="panel panel-primary" style="background-color: #f5f5f5 !important;">
+            <div class="panel-heading">Lista Nodi:</div>
+            <div class="panel-body" style="background-color: #f5f5f5 !important; min-width:800px;">
+
+                <div class="panel" style="background-color: #f5f5f5 !important;">
+                    <div id="body_NODI" class="panel-body">
+
+
+                        <!--    ******** da qui dinamicamente popula *********** -->
+
+
+
+                        <!--    ******** NODO *********** -->
+                        <!--
+                        <div id="nodo_55555" class="panel panel-default" style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);">
+                            <div class="panel-heading">55555</div>
+                            <div class="panel-body central_panel_nodo_enable">
+
+                            <table style="border-collapse:separate; border-spacing:1em;" id="nodo_55555" border="0" cellspacing="5" cellpadding="5" align="center">
+                                <tbody>
+                                    <tr>
+                                        <th width="5%">
+                                            <span class="mdl-form__icon">
+                                                <img id="nodo_55555_ch1" data-icon="switch" src="/WebSite1/image/lamp_accesa.svg" style="width:32px;">
+                                            </span>
+                                        </th>
+                                        <th width="50%">
+                                            <span class="mdl-form__label" style="padding-left:30px;">Ch 1 </span>
+                                        </th>
+                                        <th width="40%">
+                                            <input id="nodo_55555_ch1" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="5" />
+                                        </th>
+                                        <th align="right" width="5%">
+                                            <input id="nodo_55555_ch1" class="switch" data-toggle="toggle" data-width="100" type="checkbox">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th width="5%">
+                                            <span class="mdl-form__icon">
+                                                <img id="nodo_55555_ch2" data-icon="switch" src="/WebSite1/image/lamp_accesa.svg" style="width:32px;">
+                                            </span>
+                                        </th>
+                                        <th width="50%">
+                                            <span class="mdl-form__label" style="padding-left:30px;">Ch 2 </span>
+                                        </th>
+                                        <th width="40%">
+                                            <input id="nodo_55555_ch2" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="16" />
+                                        </th>
+                                        <th align="right" width="5%">
+                                            <input id="nodo_55555_ch2" class="switch" checked data-toggle="toggle" data-width="100" type="checkbox">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th width="5%">
+                                            <span class="mdl-form__icon">
+                                                <img id="nodo_55555_ch3" data-icon="switch" src="/WebSite1/image/lamp_accesa.svg" style="width:32px;">
+                                            </span>
+                                        </th>
+                                        <th width="50%">
+                                            <span class="mdl-form__label" style="padding-left:30px;">Ch 3 </span>
+                                        </th>
+                                        <th width="40%">
+                                            <input id="nodo_55555_ch3" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="28" />
+                                        </th>
+                                        <th align="right" width="5%">
+                                            <input id="nodo_55555_ch3" class="switch" checked data-toggle="toggle" data-width="100" type="checkbox">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th width="5%">
+                                            <span class="mdl-form__icon">
+                                                <img id="nodo_55555_ch4" data-icon="switch" src="/WebSite1/image/lamp_accesa.svg" style="width:32px;">
+                                            </span>
+                                        </th>
+                                        <th width="50%">
+                                            <span class="mdl-form__label" style="padding-left:30px;">Ch 4 </span>
+                                        </th>
+                                        <th width="40%">
+                                            <input id="nodo_55555_ch4" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="49" />
+                                        </th>
+                                        <th align="right" width="5%">
+                                            <input id="nodo_55555_ch4" class="switch" checked data-toggle="toggle" data-width="100" type="checkbox">
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                         </div>
+                       </div>
+                -->
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+     </div>
+
+
+
+        <script src="/WebSite1/js/main.js"></script>
+
+        <script>
+            /*
+            $(".slider").slider();
+            console.log("SLIDER EVENT");
+            */
+            /*
+            $(".slider").on("slide", function (slideEvt) {
+                //console.log(slideEvt);
+
+                var nodo = $(this).closest("input")
+                if (nodo.length == 1) {
+                    console.log(nodo[0].value);
+                    console.log(nodo[0].id);
+                }
+
+            });
+            */
+            /*
+            $(".slider").on("change", function (slideEvt) {
+                console.log(slideEvt);
+
+                var nodo = $(this).closest("input")
+                if (nodo.length == 1) {
+                    console.log(nodo[0].value);
+                    console.log(nodo[0].id);
+                }
+
+            });
+            */
+            $(document).on('change', '.slider', function () {
+
+                //console.log("SLIDER");
+                var nodo = $(this).closest("input")
+                if (nodo.length == 1) {
+                    //console.log(nodo[0].value);
+                    //console.log(nodo[0].id);
+
+                    var nodo = (nodo[0].id).slice(5, (nodo[0].id).length);
+                    nodo = nodo.slice(0, nodo.length - 4)
+                    //console.log(nodo);
+                    try {
+                        var jsonSend = update_command_to_server(nodo);
+                        socket.send(JSON.stringify(jsonSend));
+                    } catch (exception) {
+                        console.log("Errore send socket");
+                    }
+                 }
+
+            });
+
+
+            $("#body_NODI").mouseup(function () {
+                //callback stati
+                setTimeout(function () {
+
+                    try {
+                        var jsonSend = {"coamando" : "get_stato_nodo"};
+                        socket.send(JSON.stringify(jsonSend));
+                    } catch (exception) {
+                        console.log("Errore send socket");
+                    }
+
+
+
+                }, 500);
+            });
+
+
+            $(document).on('change', '.switch', function () {
+
+                //console.log("CKICKKKKKKK");
+                var nodo = $(this).closest("input")
+                //console.log($(this).prop('checked'));
+                //console.log(nodo[0].id);
+                var nodo = (nodo[0].id).slice(5, (nodo[0].id).length);
+                nodo = nodo.slice(0,nodo.length - 4)
+                //console.log(nodo);
+
+                try {
+                    var jsonSend = update_command_to_server(nodo);
+                    socket.send(JSON.stringify(jsonSend));
+                } catch (exception) {
+                    console.log("Errore send socket");
+                }
+
+                /*
+                console.log("ch1 button")
+                console.log($('#nodo_' + nodo + '_ch1.switch').closest("input").prop("checked"));
+                console.log("ch2 button")
+                console.log($('#nodo_' + nodo + '_ch2.switch').closest("input").prop("checked"));
+                console.log("ch3 button")
+                console.log($('#nodo_' + nodo + '_ch3.switch').closest("input").prop("checked"));
+                console.log("ch4 button")
+                console.log($('#nodo_' + nodo + '_ch4.switch').closest("input").prop("checked"));
+                
+                //slider
+                console.log("ch1 slider")
+                console.log($('#nodo_' + nodo + '_ch1.slider').closest("input").prop("value"));
+                console.log("ch2 slider")
+                console.log($('#nodo_' + nodo + '_ch2.slider').closest("input").prop("value"));
+                console.log("ch3 slider")
+                console.log($('#nodo_' + nodo + '_ch4.slider').closest("input").prop("value"));
+                console.log("ch4 slider")
+                console.log($('#nodo_' + nodo + '_ch4.slider').closest("input").prop("value"));
+                */
+
+            /*
+                var ch = nodo.slice(nodo.length - 4, nodo.length)
+
+                console.log(ch)
+                */
+
+               /* var datas = { nodo: { "button": [$(this).prop('checked'), nodoc ]    } };
+                console.log(datas);
+
+                
+                try {
+                    socket.send(JSON.stringify(datas));
+                } catch (exception) {
+                    console.log("Errore send socket");
+                }
+                */
+
+            });
+
+
+            $(document).on('click', '.bottoniConnetti', function () {
+                //alert(this.id);
+                try {
+                    var jsonSend = { "coamando": "get_stato_nodo", "nodo": this.id };
+                    socket.send(JSON.stringify(jsonSend));
+                } catch (exception) {
+                    console.log("Errore send socket");
+                }
+
+
+
+            });
+
+            /*
+            $('.switch').change(function () {
+                var nodo = $(this).closest("input")
+                console.log($(this).prop('checked'));
+                console.log(nodo[0].id);
+
+     
+                //cambia immagine icon
+                //$('img#' + nodo[0].id).attr("src", "/WebSite1/image/lamp_spenta.svg");       
+                });
+            
+            */
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+            /*
+            //*********************test ***************(da cancellare)**************************** caambia stato switch
+            $('#test_Switch').change(function () {
+                console.log("------");
+                
+                if ($(this).prop('checked') == true) {
+                    //on
+                    $('#nodo_55555_ch1.switch').bootstrapToggle('on');
+
+                } else {
+                    //off
+                    $('#nodo_55555_ch1.switch').bootstrapToggle('off');
+
+                }
+
+                //set slider 80% manualy
+                $('#nodo_55555_ch1.slider').slider('setValue', 80);
+
+            });
+            */
+                
+
+
+
+            //websocket
+            var loc = window.location, new_uri;
+            if (loc.protocol === "https:") {
+                new_uri = "wss:";
+            } else {
+                new_uri = "ws:";
+            }
+            new_uri += "//" + loc.host + "/ws";
+           // new_uri += loc.pathname + "/ws";
+
+            var socket = new WebSocket(new_uri);
+
+            socket.onopen = function () {
+                console.log("Socket has been opened!");
+
+
+                //Recupera Lista Nodi dal server e aggiorna la pagina
+                $(document).ready(function () {
+                    var jqxhr = $.getJSON("GetListaNodi.json", function (data) {
+                        //console.log("success");
+                        //console.log(data);
+                        var count = Object.keys(data).length;
+                        //console.log(count);
+                       // $('#body_NODI').empty();
+                        $.each(data.OrdineNodi, function (key, val) {
+                            if (data[val].Tipo == 5) {
+                                popola_main_nodi_dimmer(val, data[val]);
+
+                                if (((data[val].disable).localeCompare("true")) == 0) {
+                                    //disabilita nodo
+                                    disable_nodo(val);
+                                } 
+
+                            }
+                        });
+                    })
+                 .fail(function () {
+                     console.log("error");
+                 });
+                });
+
+
+
+
+            }
+
+            socket.onmessage = function (msg) {
+                var data = msg.data;
+                var obj = JSON.parse(data);
+
+                if (((obj.disable).localeCompare("true")) == 0) {
+                    //console.log(obj.nodo);
+                    //Se abilitato, --> disabilita
+                    if ($('#nodo_' + obj.nodo + ' > .panel-body').hasClass('central_panel_nodo_enable') == true) {
+                        disable_nodo(obj.nodo);
+                    }
+
+                } else {
+                    //update stato nodo
+                    //Verifica se disabilitato
+                    if ($('#nodo_' + obj.nodo + ' > .panel-body').hasClass('central_panel_nodo_disable') == true) {
+                        //Abilita
+                        var datas = { 'nodo': obj.nodo };
+                        var dataj = JSON.stringify(datas);
+                        $.post('GetNodo.json', dataj, function (response) {
+                            var subjects = JSON.parse(JSON.stringify(response));
+                            console.log(subjects.funzionamento);
+                            abilita_nodo(obj.nodo, subjects.funzionamento);
+                        }, 'json');
+                       
+                    }
+                    update_stato_nodo(obj.nodo, obj);
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+            socket.onclose = function () {
+                console.log("errore socket");
+            }
+
+        </script>
+
+
+</body>
+</html>
