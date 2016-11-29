@@ -5,14 +5,16 @@ Raspberry è il cordinatore e webserver, il webserver è installato in "/home/ap
 pyton tornado, mysql.
 
 Connessioni:
-* Raspberry      nrf24l01+
-* 22[GPIO25]       CE
-* 24[GPIO8]        CSN
-* 23[GPIO11]       SCK
-* 21[GPIO9]        MISO
-* 20[GPIO10]       MOSI
-*  ---            IRQ
-
+-----------------------------
+ Raspberry   |   nrf24l01+
+-------------|---------------
+ 22[GPIO25]  |     CE
+ 24[GPIO8]   |     CSN
+ 23[GPIO11]  |     SCK
+ 21[GPIO9]   |     MISO
+ 20[GPIO10]  |     MOSI
+  ---        |    IRQ
+------------------------------
 
 ## --------Arduino UNO:----------
 Arduino Uno usati come nodi
