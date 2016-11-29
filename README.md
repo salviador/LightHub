@@ -18,7 +18,7 @@ pyton tornado, mysql.
 
 ## --------Arduino UNO:----------
 Arduino Uno usati come nodi
-Per ogni nodo cambiare "const uint64_t ADD_NODO = 0x0000000023LL;" DEVE ESSERE UNIVOCO !
+Per ogni nodo *cambiare* "const uint64_t **ADD_NODO** = 0x0000000023LL;" DEVE ESSERE *UNIVOCO* !
 
 ### Connessioni:
 
@@ -42,13 +42,12 @@ Arduino  |   nrf24l01+
 -----------------------
 
 
-*switch A0
+* switch A0
 * led   A1
 
 
-
 La programmazione avviene in automatico, svolgere i seguenti passi:
-1 - Premere il puslante del nodo
-2- Nella web-app sezione "Nodi" , clicca "Aggiungi Nodo"
+1. Premere il puslante del nodo
+2. Nella web-app sezione "Nodi" , clicca "Aggiungi Nodo"
 
 
