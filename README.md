@@ -22,12 +22,11 @@ Per ogni nodo cambiare "const uint64_t ADD_NODO = 0x0000000023LL;" DEVE ESSERE U
 
 ### Connessioni:
 
------------------------
-dimmer_1 | 3
-dimmer_2 | 4
-dimmer_3 | 5
-dimmer_4 | 6
------------------------
+*dimmer_1 | 3
+*dimmer_2 | 4
+*dimmer_3 | 5
+*dimmer_4 | 6
+
 
 Arduino  |   nrf24l01+
 ---------|--------------
