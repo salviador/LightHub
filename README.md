@@ -22,8 +22,8 @@ Per ogni nodo cambiare "const uint64_t ADD_NODO = 0x0000000023LL;" DEVE ESSERE U
 
 ### Connessioni:
 
-dimmer | arduino
--------------------
+dimmer   | arduino
+---------|----------
 dimmer_1 | 3
 dimmer_2 | 4
 dimmer_3 | 5
@@ -42,12 +42,10 @@ Arduino  |   nrf24l01+
 -----------------------
 
 
------------------- 
-switch | A0
-       |[per programmazione, acquisizione da parte del cordinatore] 
-------------------
-led    | A1
-------------------
+*switch A0
+* led   A1
+
+
 
 La programmazione avviene in automatico, svolgere i seguenti passi:
 1 - Premere il puslante del nodo
